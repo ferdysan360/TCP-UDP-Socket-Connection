@@ -3,7 +3,7 @@ A simple TCP simulated connection build on top of UDP socket.
 
 ## How to use:
 1. start the receiver server with `py receiver.py`
-  - you can change the IP by changing the `UDP_IP` content
+  * you can change the IP by changing the `UDP_IP` content
 2. enter the PORT you wish to bind
 3. run the sender client with `py send.py`
 4. enter the destination IP and PORT
