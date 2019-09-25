@@ -6,6 +6,8 @@ import packet
 from constant import *
 from datetime import datetime
 
+UDP_IP = "127.0.0.1" # localhost
+
 def receive_message(name):
     "Send message procedure (default)"
     global thread_count
@@ -44,8 +46,6 @@ def receive_message(name):
 
 print("Input port:")
 UDP_PORT = (int) (input(">> "))
-
-UDP_IP = "127.0.0.1"
 
 sock = socket.socket()
 sock.bind((UDP_IP, UDP_PORT))
