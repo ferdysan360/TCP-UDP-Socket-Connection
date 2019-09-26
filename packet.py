@@ -56,7 +56,7 @@ class packet:
     id_byte = str(self.id).encode()
     seq_number_byte = str(self.seq_number).encode()
     length_byte = str(self.length).encode()
-    checksum_byte = str(self.checksum).encode()
+    checksum_byte = self.checksum
     data_byte = self.data
     packet_byte = b"".join([type_byte, SEP,
         id_byte, SEP,
@@ -85,6 +85,6 @@ def decode_packet(byte_str):
     result_packet = packet(byte_arr[0],
         int(byte_arr[1].decode()),
         int(byte_arr[2].decode()),
-        int(byte_arr[4].decode()),
+        byte_arr[4],
         byte_arr[5])
     return result_packet
